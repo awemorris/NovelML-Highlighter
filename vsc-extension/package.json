@@ -54,29 +54,6 @@
         "scopeName": "source.ray",
         "path": "./syntaxes/ray.tmLanguage.json"
       }
-    ],
-    "debuggers": [
-      {
-        "type": "cppdbg",
-        "label": "NovelML Run",
-        "languages": [
-          "novelml",
-          "ray"
-        ],
-        "initialConfigurations": [
-          {
-            "name": "Run NovelML",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}/suika3",
-            "args": [],
-            "cwd": "${workspaceFolder}",
-            "stopAtEntry": false,
-            "externalConsole": false,
-            "MIMode": "gdb"
-          }
-        ]
-      }
     ]
   },
   "repository": {
