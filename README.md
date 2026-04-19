@@ -30,6 +30,7 @@ A **multi-editor syntax highlighting extension pack** for the **NovelML** visual
 #### Visual Studio Code
 
 > **注意**: 具体高亮颜色因编辑器主题而异。推荐使用[**Palenight Theme**](https://marketplace.visualstudio.com/items?itemName=whizkydee.material-palenight-theme)。
+>
 > **Note**: Specific highlight colors may vary depending on the editor theme. [**Palenight Theme**](https://marketplace.visualstudio.com/items?itemName=whizkydee.material-palenight-theme) is recommended.
 
 
@@ -38,6 +39,7 @@ A **multi-editor syntax highlighting extension pack** for the **NovelML** visual
 #### UltraEdit
 
 > **注意**: 由于不完备的文本匹配机制，这份高亮方案并不优秀.。
+>
 > **Note**: Due to an incomplete text matching mechanism, this highlighting solution is not optimal.
 
 ![ultraedit-example](assets/ultraedit-example.png)
