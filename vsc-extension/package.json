@@ -12,14 +12,11 @@
   ],
   "keywords": [
     "novelml",
+    "ray",
     "suika",
     "suika3",
     "highlighting"
   ],
-  "activationEvents": [
-    "onLanguage:novelml"
-  ],
-  "main": "./syntaxes/novelml.tmLanguage.json",
   "contributes": {
     "languages": [
       {
@@ -31,7 +28,19 @@
         "extensions": [
           ".novel"
         ],
-        "configuration": "./language-configuration.json"
+        "configuration": "./languages/novelml-language-configuration.json"
+      },
+      {
+        "id": "ray",
+        "aliases": [
+          "Ray",
+          "ray"
+        ],
+        "extensions": [
+          ".ray",
+          ".pf"
+        ],
+        "configuration": "./languages/ray-language-configuration.json"
       }
     ],
     "grammars": [
@@ -39,11 +48,42 @@
         "language": "novelml",
         "scopeName": "source.novelml",
         "path": "./syntaxes/novelml.tmLanguage.json"
+      },
+      {
+        "language": "ray",
+        "scopeName": "source.ray",
+        "path": "./syntaxes/ray.tmLanguage.json"
+      }
+    ],
+    "debuggers": [
+      {
+        "type": "cppdbg",
+        "label": "NovelML Run",
+        "languages": [
+          "novelml",
+          "ray"
+        ],
+        "initialConfigurations": [
+          {
+            "name": "Run NovelML",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/suika3",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "externalConsole": false,
+            "MIMode": "gdb"
+          }
+        ]
       }
     ]
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/lalalll-lalalll/NovelML-Highlighter.git"
-  }
+  },
+  "extensionDependencies": [
+    "ms-vscode.cpptools"
+  ]
 }
