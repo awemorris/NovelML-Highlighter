@@ -14,7 +14,6 @@ A **multi-editor syntax highlighting extension pack** for the **NovelML** visual
 
 ---
 
-
 ### NovelML 高亮器
 
 > **语言:** [English](#novelml-highlighter) | 简体中文
@@ -24,14 +23,22 @@ A **multi-editor syntax highlighting extension pack** for the **NovelML** visual
 - **核心功能**：基于 TextMate 规则的完整语法支持，精准识别标签、属性、变量和注释。
 - **适用场景**：配合 [Suika3](https://github.com/awemorris/suika3) 引擎使用，让剧本编写更加清晰高效。
 
-
-
-
-
 ### 效果预览
 
 安装插件并应用主题后，你的代码将呈现如下效果：
-> **注意**: 具体高亮颜色因编辑器主题而异。推荐使用[**Palenight Theme**](https://marketplace.visualstudio.com/items?itemName=whizkydee.material-palenight-theme)。
 
-![example](assets/example.png)
+#### Visual Studio Code
+
+> **注意**: 具体高亮颜色因编辑器主题而异。推荐使用[**Palenight Theme**](https://marketplace.visualstudio.com/items?itemName=whizkydee.material-palenight-theme)。
+> **Note**: Specific highlight colors may vary depending on the editor theme. [**Palenight Theme**](https://marketplace.visualstudio.com/items?itemName=whizkydee.material-palenight-theme) is recommended.
+
+
+![vscode-example](assets/vscode-example.png)
+
+#### UltraEdit
+
+> **注意**: 由于不完备的文本匹配机制，这份高亮方案并不优秀.。
+> **Note**: Due to an incomplete text matching mechanism, this highlighting solution is not optimal.
+
+![ultraedit-example](assets/ultraedit-example.png)
 

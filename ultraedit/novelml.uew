@@ -1,0 +1,26 @@
+/L100"NovelML" Noquote Line Comment = # File Extensions = novel
+/Regexp Type = Perl
+
+/Comment 糟糕的匹配方案，仅能勉强使用。
+/C1"Variables"
+/${ }
+
+/C2"Brackets"
+= " ' ]
+
+/C3"Tags Core"
+[choose [if [elseif [else [endif [goto [label [chapter
+
+/C4"Tags Macro"
+[callmacro [defmacro [endmacro [returnmacro [set [load
+
+/C5"Tags Media"
+[bgm [bg [se [video [anime [move [wait [volume [skip [click
+
+/C6"Tags UI"
+[ch [layer [pencil [gui [config
+
+/C7"Attributes"
+[text [name $ { }
+
+
