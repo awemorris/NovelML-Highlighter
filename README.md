@@ -44,3 +44,6 @@ A **multi-editor syntax highlighting extension pack** for the **NovelML** visual
 
 ![ultraedit-example](assets/ultraedit-example.png)
 
+#### Notepad++
+
+![notepad-plus-plus-example](assets/notepad-plus-plus-example.png)
