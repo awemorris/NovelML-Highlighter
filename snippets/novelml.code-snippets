@@ -1,0 +1,217 @@
+
+{
+  "DSL: Text Display (Core)": {
+    "prefix": "t",
+    "body": [
+		"[text name=\"${1:Name}\" text=\"${2:在此输入对话内容}\"]$0"],
+    "description": "插入对话标签 (自动聚焦文本内容)"
+  },
+  "DSL: Narration (No Name)": {
+    "prefix": "n",
+    "body": [
+      "[text text=\"${1:在此输入旁白内容}\"]$0"
+    ],
+    "description": "插入无名字的旁白标签"
+  },
+  "DSL: Text Action (Clear/Hide)": {
+    "prefix": "nvl",
+    "body": [
+      "[text action=\"${1|clear,new,show,hide|}\"]$0"
+    ],
+    "description": "插入文本框控制指令 (clear, new, show, hide)"
+  },
+
+  "DSL: Character Show (ch)": {
+    "prefix": "ch",
+    "body": [
+      "[ch ${1|center,left,right,left-center,right-center,face,bg,back|}=\"${2:filename.png}\" time=\"${3:0.5}\"]$0"
+    ],
+    "description": "显示角色 (带位置选择和时间)"
+  },
+  "DSL: Character Hide": {
+    "prefix": "cha",
+    "body": [
+      "[chapter name=\"${1:在此输入章节名}\"]$0"
+    ],
+    "description": "输入章节名"
+  },
+	"DSL: Chapter": {
+    "prefix": "chx",
+    "body": [
+      "[ch ${1|center,left,right|}=\"none\" time=\"${2:0.5}\"]$0"
+    ],
+    "description": "隐藏角色"
+  },
+  "DSL: Background (bg)": {
+    "prefix": "bg",
+    "body": [
+      "[bg file=\"${1:filename.png}\"]$0"
+    ],
+    "description": "切换背景图"
+  },
+  "DSL: Background Music (bgm)": {
+    "prefix": "bgm",
+    "body": [
+      "[bgm file=\"${1:filename.ogg}\"]$0"
+    ],
+    "description": "播放背景音乐"
+  },
+  "DSL: Sound Effect (se)": {
+    "prefix": "se",
+    "body": [
+      "[se file=\"${1:filename.ogg}\"]$0"
+    ],
+    "description": "播放音效"
+  },
+  "DSL: GUI": {
+    "prefix": "gui",
+    "body": [
+      "[gui file=\"${1:filename.txt}\"]$0"
+    ],
+    "description": "gui"
+  },
+
+  "DSL: Wait & Click": {
+    "prefix": "wait",
+    "body": [
+      "[wait time=\"${1:1.0}\"]$0"
+    ],
+    "description": "等待指定秒数"
+  },
+  "DSL: Click (Wait for input)": {
+    "prefix": "click",
+    "body": [
+      "[click]$0"
+    ],
+    "description": "等待用户点击"
+  },
+
+  "DSL: If / Else / Endif (Block)": {
+    "prefix": "if",
+    "body": [
+      "[if lhs=\"${1:\\$\\{variable\\}}\" op=\"${2|==,!=,>,>=,<,<=|}\" rhs=\"${3:value}\"]",
+      "\t$0",
+      "[endif]"
+    ],
+    "description": "条件分支结构"
+  },
+  "DSL: Elseif": {
+    "prefix": "elseif",
+    "body": [
+      "[elseif lhs=\"${1:\\$\\{variable\\}}\" op=\"${2|==,!=,>,>=,<,<=|}\" rhs=\"${3:value}\"]"
+    ],
+    "description": "否则如果"
+  },
+  "DSL: Else": {
+    "prefix": "else",
+    "body": [
+      "[else]"
+    ],
+    "description": "否则"
+  },
+
+  "DSL: Macro Definition": {
+    "prefix": "def",
+    "body": [
+      "[defmacro name=\"${1:macro_name}\"]",
+      "\t$0",
+      "[endmacro]"
+    ],
+    "description": "定义宏"
+  },
+  "DSL: Call Macro": {
+    "prefix": "call",
+    "body": [
+      "[callmacro name=\"${1:macro_name}\"]$0"
+    ],
+    "description": "调用宏"
+  },
+
+  "DSL: Label & Goto": {
+    "prefix": "label",
+    "body": [
+      "[label name=\"${1:label_name}\"]$0"
+    ],
+    "description": "定义跳转标签"
+  },
+  "DSL: Goto": {
+    "prefix": "goto",
+    "body": [
+      "[goto name=\"${1:label_name}\"]$0"
+    ],
+    "description": "跳转到标签"
+  },
+  
+  "DSL: Set Variable": {
+    "prefix": "set",
+    "body": [
+      "[set name=\"${1:var_name}\" value=\"${2:value}\"]$0"
+    ],
+    "description": "设置变量值"
+  },
+  
+  "DSL: Choose (Multi-line 2 Options)": {
+    "prefix": "choose",
+    "body": [
+      "[choose",
+      "  name=\"${1:var_name}\"",
+      "  text1=\"${2:选项A文本}\"",
+      "  text2=\"${3:选项B文本}\"",
+      "  value1=\"${4:1}\"",
+      "  value2=\"${5:2}\"",
+      "]"
+    ],
+    "description": "生成换行格式的双选项分支"
+  },
+  "DSL: Choose (Multi-line 3 Options)": {
+    "prefix": "choose3",
+    "body": [
+      "[choose",
+      "  name=\"${1:var_name}\"",
+      "  text1=\"${2:选项A}\"",
+      "  text2=\"${3:选项B}\"",
+      "  text3=\"${4:选项C}\"",
+      "  value1=\"${5:1}\"",
+      "  value2=\"${6:2}\"",
+      "  value3=\"${7:3}\"",
+      "]"
+    ],
+    "description": "生成换行格式的三选项分支"
+  },
+  "DSL: Move Animation": {
+    "prefix": "move",
+    "body": [
+      "[move time=\"${1:1.0}\" ${2|bg,bg2,back,left,right,center,left-center,right-center,face|}-${3|a,x,y,scale-x,scale-y,center-x,center-y,rotate,dim|}=\"${4:value}\"]$0"
+    ],
+    "description": "图层动画移动"
+  },
+  
+  "DSL: Layer (Full Control)": {
+    "prefix": "layer",
+    "body": [
+      "[layer",
+      "  name=\"${1|bg,bg2,msgbox,namebox,click,chb,chb-eye,chb-lip,chb-fo,chc,chl,chlc,chr,chrc,chf,eff1,eff2,eff3,eff4,efb1,efb2,text1,text2,gui1,gui2|}\"",
+      "  file=\"${2:filename.png}\"",
+      "  x=\"${3:0}\"",
+      "  y=\"${4:0}\"",
+      "  alpha=\"${5:255}\"",
+      "  scale-x=\"${6:1.0}\"",
+      "  scale-y=\"${7:1.0}\"",
+      "  center-x=\"${9:0}\"",
+      "  center-y=\"${10:0}\"",
+	  "  rotate=\"${8:0.0}\"",
+      "]"
+    ],
+    "description": "图层控制 (带常用图层名下拉菜单)"
+  },
+  "DSL: Layer Clear": {
+    "prefix": "layerclear",
+    "body": [
+      "[layer",
+      "  name=\"${1|bg,bg2,msgbox,namebox,click,chb,chb-eye,chb-lip,chb-fo,chc,chl,chlc,chr,chrc,chf,eff1,eff2,eff3,eff4,efb1,efb2,text1,text2,gui1,gui2|}\"",
+      "  file=\"none\"",
+      "]"
+    ],
+    "description": "清除指定图层 (file=\"none\")"
+  }
+}
