@@ -17,11 +17,6 @@
         {
           "name": "comment.line.double-slash.ray",
           "match": "//.*$"
-        },
-        {
-          "name": "comment.block.ray",
-          "begin": "/\\*",
-          "end": "\\*/"
         }
       ]
     },
